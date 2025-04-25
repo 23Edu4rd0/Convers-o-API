@@ -26,7 +26,7 @@ st.title('Conversor de Moedas')
 resp = requests.get(url.format(key=key))
 if resp.status_code == 200:
     dados = resp.json()
-    dicionavrio = dados['conversion_rates']
+    dicionario = dados['conversion_rates']
     moedas_mundo = list(dicionario.keys())
 
     moeda_original = st.selectbox('Digite uma moeda para conversão (ex: BRL): ', moedas_mundo, index=0)
